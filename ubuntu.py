@@ -36,7 +36,7 @@ for line in lines:
 headers = ['Filepath', 'Latitude', 'Longitude', 'Altitude']
 
 # Write the formatted lines to a new CSV file with headers
-with open('coordinates.csv', 'w', encoding='utf-8', newline='') as file:
+with open('coordinates.txt', 'w', encoding='utf-8', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(headers)
     for line in formatted_lines:
