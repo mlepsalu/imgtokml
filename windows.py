@@ -17,7 +17,7 @@ exiftool_cmd = 'exiftool -E -p kml.fmt Images > test.kml'
 subprocess.run(exiftool_cmd, shell=True)
 
 # Command to extract GPS coordinates using Exiftool and output formatted coordinates to a CSV file
-extract_coordinates_cmd = 'exiftool -T -c "%.6f" -p "${Filepath};${GPSLatitude};${GPSLongitude};${GPSAltitude}" Images > coordinates.csv'
+extract_coordinates_cmd = 'exiftool -T -c "%.6f" -p "${Filepath};${GPSLatitude};${GPSLongitude};${GPSAltitude}" Images > coordinates.txt'
 
 # Run the command to extract GPS coordinates and save them to a CSV file
 subprocess.run(extract_coordinates_cmd, shell=True)
